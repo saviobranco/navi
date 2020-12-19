@@ -1,0 +1,14 @@
+#dict com as notas
+notas={
+    "aluno1" : 7,
+    "aluno2" : 8,
+    "aluno3" : 9,
+    "aluno4" : 5,
+    "aluno5" : 6,
+    }
+ 
+ #acha o aluno com maior nota
+maior= max(notas, key=notas.get)
+
+#imprime nome aluno e sua nota
+print(maior,",nota", notas[maior])
