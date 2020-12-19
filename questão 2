@@ -1,0 +1,29 @@
+import numpy as np
+from statistics import mean
+# cria lista
+x=[0]*10
+
+
+for i in range(len(x)):
+    #calcula o fatorial i
+    if i == 0:
+        fat=1
+    else:
+        for j in range(1,i + 1):
+            fat = fat*j
+    
+    #calcula o número para a posição i
+    if i%2==0:
+        x[i]=(3**i)+7*fat
+    else:
+        x[i]=2**i+4*np.log(i)
+    fat=1
+    print("Elemento ",i,"da lista é:",x[i])
+
+#calcula maior
+maior = max(x)
+#calcula média
+media = round(mean(x),2)
+
+print("O maior número da lista é:",maior)
+print("A média dos números da lista é:",media)
